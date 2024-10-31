@@ -1,0 +1,259 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Font & Background */
+body {
+    font-family: 'Poppins', sans-serif; /* Updated font for a more modern look */
+    background-color: #121212;
+    color: #f2f2f2;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 3rem 2rem;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: #f2f2f2;
+    box-shadow: 0px 4px 20px rgba(75, 139, 255, 0.3);
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    animation: fadeIn 1s ease-in-out;
+    text-shadow: 0 0 5px #00bfff, 0 0 10px #00bfff; /* Neon effect */
+}
+
+header p {
+    font-size: 1.25rem;
+}
+
+/* Services Section */
+#services {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: #1e1e2f;
+    color: #f2f2f2;
+}
+
+#services h2 {
+    font-size: 2.5rem;
+    color: #00bfff;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    position: relative;
+    margin-bottom: 1rem;
+    animation: slideIn 1s ease-out;
+    text-shadow: 0 0 5px #00bfff, 0 0 10px #00bfff; /* Neon effect */
+}
+
+#services h2::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -8px;
+    width: 60px;
+    height: 4px;
+    background: #00bfff;
+    transform: translateX(-50%);
+    box-shadow: 0 0 10px #00bfff; /* Neon glow */
+}
+
+#services p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 1rem auto 2rem;
+    color: #c3c6cf;
+}
+
+/* Service Container */
+.service-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.service-box {
+    flex: 1 1 200px;
+    max-width: 250px;
+    background: #292945;
+    padding: 2rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #f2f2f2;
+    animation: fadeInUp 1s ease forwards;
+    opacity: 0;
+    position: relative; /* Added for neon effect */
+}
+
+.service-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0, 191, 255, 0.3), rgba(0, 191, 255, 0));
+    border-radius: 8px;
+    filter: blur(8px);
+    z-index: -1;
+}
+
+.service-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 20px rgba(0, 191, 255, 0.7); /* Neon glow */
+}
+
+.service-box h3 {
+    color: #00bfff;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.service-box p {
+    font-size: 1rem;
+    color: #c3c6cf;
+}
+
+/* Services List */
+ul {
+    list-style-type: none;
+    padding: 2rem;
+    font-size: 1.1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+ul li {
+    background-color: #292945;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    color: #c3c6cf;
+    transition: background 0.3s ease;
+}
+
+ul li:hover {
+    background-color: #00bfff;
+    color: #fff;
+}
+
+/* Featured Projects */
+#projects {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: #121212;
+}
+
+#projects h2 {
+    font-size: 2.5rem;
+    color: #00bfff;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 5px #00bfff, 0 0 10px #00bfff; /* Neon effect */
+}
+
+#projects h3 {
+    color: #c3c6cf;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+
+/* Contact Section */
+#contact {
+    padding: 4rem 2rem;
+    text-align: center;
+    background: #1e1e2f;
+    color: #f2f2f2;
+}
+
+#contact h2 {
+    font-size: 2.5rem;
+    color: #00bfff;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 5px #00bfff, 0 0 10px #00bfff; /* Neon effect */
+}
+
+#contact p {
+    font-size: 1.2rem;
+    color: #c3c6cf;
+}
+
+#contact a {
+    color: #00bfff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#contact a:hover {
+    color: #6a4bff;
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background: #121212;
+    padding: 2rem 0;
+    text-align: center;
+    color: #f2f2f2;
+    font-size: 0.9rem;
+    border-top: 1px solid #292945;
+    position: relative;
+    overflow: hidden; /* Added for neon effect */
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 191, 255, 0.2), rgba(0, 191, 255, 0));
+    filter: blur(10px);
+    z-index: -1;
+}
+
+footer p {
+    text-shadow: 0 0 5px #00bfff, 0 0 10px #00bfff; /* Neon effect */
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    #services h2, #contact h2, #projects h2 {
+        font-size: 2rem;
+    }
+
+    .service-box {
+        max-width: 90%;
+        margin: auto;
+    }
+}
